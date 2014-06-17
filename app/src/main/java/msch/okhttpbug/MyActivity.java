@@ -22,7 +22,12 @@ public class MyActivity extends Activity {
         setContentView(R.layout.activity_my);
 
 
+        // this url doesn't work
         String url = "https://s.auspiel.de/sounds/effects/mischen-1.mp3";
+
+        // this url works
+        // String url = "https://s.auspiel.de/sounds/male/bayerisch/greeting/begruessung-1.mp3"
+
         OkHttpClient httpClient = new OkHttpClient();
         httpClient.setReadTimeout(10, TimeUnit.SECONDS);
         Call call = httpClient.newCall(new Request.Builder().
